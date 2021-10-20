@@ -4,21 +4,31 @@ plugins {
 }
 
 allprojects {
-    repositories {
-        // 요게 없으면 Cannot resolve external dependency org.jetbrains.kotlin:kotlin-compiler-embeddable:1.3.21 because no repositories are defined. 발생
-        mavenCentral() // mavenCentral 인건 상관없네.
-    }
-}
-
-subprojects {
     group = "what.the.jpa.book"
     version = "1.0-SNAPSHOT"
 
     repositories {
-        mavenCentral()
+        // 요게 없으면 Cannot resolve external dependency org.jetbrains.kotlin:kotlin-compiler-embeddable:1.3.21 because no repositories are defined. 발생
+        mavenCentral() // mavenCentral 인건 상관없네.
     }
-}
 
-dependencies {
-    implementation(kotlin("stdlib"))
+    apply(plugin = "java")
+    apply(plugin = "kotlin")
+
+    dependencies {
+        implementation(kotlin("stdlib"))
+        implementation("org.hibernate:hibernate-entitymanager:6.0.0.Alpha7")
+        runtimeOnly("com.h2database:h2:1.4.199")
+//        runtimeOnly("com.h2database:h2")
+
+        //JUnit4 추가
+//    testImplementation("org.junit.vintage:junit-vintage-engine") {
+//        exclude group: "org.hamcrest", module: "hamcrest-core"
+//    }
+
+        //querydsl 추가
+//    implementation ("com.querydsl:querydsl-jpa")
+        //querydsl 추가
+//    implementation ("com.querydsl:querydsl-apt")
+    }
 }
