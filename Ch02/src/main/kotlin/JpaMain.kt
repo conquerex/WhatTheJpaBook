@@ -1,8 +1,6 @@
 import javax.persistence.EntityManager
 import javax.persistence.Persistence
 
-class JpaMain
-
 fun main(args: Array<String>) {
     //엔티티 매니저 팩토리 생성
     val emf = Persistence.createEntityManagerFactory("jpabook")
@@ -25,7 +23,7 @@ fun main(args: Array<String>) {
 }
 
 fun logic(em: EntityManager) {
-    val id = "id1"
+    val id = "id4"
     val member = Member()
     member.id = id
     member.username = "샘플이름"
@@ -46,5 +44,5 @@ fun logic(em: EntityManager) {
     println(">>> members.size = " + members.size)
 
     //삭제
-//    em.remove(member)
+    em.remove(member)
 }

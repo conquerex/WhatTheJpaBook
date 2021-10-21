@@ -19,16 +19,17 @@ allprojects {
         implementation(kotlin("stdlib"))
         implementation("org.hibernate:hibernate-entitymanager:6.0.0.Alpha7")
         runtimeOnly("com.h2database:h2:1.4.199")
-//        runtimeOnly("com.h2database:h2")
 
-        //JUnit4 추가
-//    testImplementation("org.junit.vintage:junit-vintage-engine") {
-//        exclude group: "org.hamcrest", module: "hamcrest-core"
-//    }
+        //JUnit 추가
+        testImplementation("org.junit.vintage:junit-vintage-engine:5.8.1") {
+            exclude(group = "org.hamcrest", module = "hamcrest-core")
+        }
 
         //querydsl 추가
-//    implementation ("com.querydsl:querydsl-jpa")
+        implementation("com.querydsl:querydsl-jpa:5.0.0")
+
         //querydsl 추가
-//    implementation ("com.querydsl:querydsl-apt")
+        implementation("com.querydsl:querydsl-apt:5.0.0")
+
     }
 }
