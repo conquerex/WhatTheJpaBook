@@ -12,3 +12,4 @@ pluginManagement {
 
 rootProject.name = "WhatTheJpaBook"
 include("Ch02")
+include("Ch10")
