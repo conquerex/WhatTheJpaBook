@@ -27,9 +27,8 @@ allprojects {
 
         //querydsl 추가
         implementation("com.querydsl:querydsl-jpa:5.0.0")
-
-        //querydsl 추가
         implementation("com.querydsl:querydsl-apt:5.0.0")
+
 
     }
 }
