@@ -14,4 +14,3 @@ rootProject.name = "WhatTheJpaBook"
 include("Ch02")
 include("Ch10")
 include("Ch12")
-include("Ch12")
