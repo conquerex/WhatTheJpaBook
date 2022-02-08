@@ -11,7 +11,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
 @Configuration
 @EnableAsync
 class AsyncConfig(
-    @Value("\${sfn.async.poolSize:10}")
+    @Value("\${sample.poolsize}")
     private val poolSize: Int,
 ) {
     @Bean
