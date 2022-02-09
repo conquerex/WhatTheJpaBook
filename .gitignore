@@ -1,3 +1,6 @@
+### Custom add
+*.env
+
 ### Gradle template
 .gradle
 **/build/

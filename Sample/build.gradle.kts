@@ -16,6 +16,9 @@ repositories {
 }
 
 dependencies {
+    // okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
