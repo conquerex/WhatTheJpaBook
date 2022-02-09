@@ -52,7 +52,7 @@ class SampleApplicationTests {
 class Sample {
     @Async("taskExecutor")
     fun async() {
-        Thread.sleep(100)
+        Thread.sleep(300)
         println("""
             In async: ${Thread.currentThread()} // ${LocalTime.now()}
         """.trimIndent())
